@@ -49,7 +49,7 @@ img { max-width: 100%; display: block; }
 
 a { color: inherit; }
 
-h1, h2, h3, .brand-name, .step-no, .portrait {
+h1, h2, h3, .brand-name, .step-no {
   font-family: var(--serif);
   font-weight: 460;
   letter-spacing: -0.03em;
@@ -419,22 +419,27 @@ button.btn {
   margin-bottom: 0.6rem;
 }
 
-.doctor {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.1rem;
-  align-items: start;
+.name-list {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
 }
 
-.portrait {
-  width: 4.2rem;
-  height: 4.2rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--spruce);
-  color: var(--sand);
-  font-size: 1.35rem;
+.name-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.name-list li:last-child { border-bottom: 1px solid var(--line); }
+
+.name-list span {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  white-space: nowrap;
 }
 
 .muted { color: var(--ink-soft); }
@@ -503,7 +508,17 @@ button.btn {
   border-top: 1px solid var(--line);
 }
 
-.person h3 { font-size: 1.45rem; }
+.person h2 { font-size: 1.45rem; margin: 0; }
+
+.group-label {
+  margin: 2.4rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
 
 .role {
   margin: 0 0 0.4rem;
